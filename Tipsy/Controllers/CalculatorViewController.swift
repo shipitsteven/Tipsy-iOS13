@@ -41,6 +41,7 @@ class CalculatorViewController: UIViewController {
         let input: String = billTextField.text ?? "0.0"
         let inputAmount: Float = Float(input) ?? 0.0
         calculatorBrain.calculateTip(inputAmount: inputAmount, tipPercentage: tipPercent!)
+        calculatorBrain.getSplit()
         self.performSegue(withIdentifier: "goToResult", sender: self)
     }
     
